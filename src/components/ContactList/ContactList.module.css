@@ -1,0 +1,11 @@
+.contacts {
+  width: 400px;
+}
+
+.contacts__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
