@@ -18,6 +18,7 @@ const AddContacts = ({ addContact }) => {
         break;
       case 'number':
         setNumber(value);
+        break;
       default:
         return;
     }
