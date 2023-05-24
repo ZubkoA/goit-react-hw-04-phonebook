@@ -13,22 +13,12 @@ const getContacts = () => {
   const parsedData = JSON.parse(localData);
   if (parsedData) {
     return parsedData;
-  }
+  } else return [];
 };
-
 
 const App = () => {
   const [contacts, setContacts] = useState(getContacts);
   const [filter, setFilter] = useState('');
-
-  useEffect(() => {
-    const localData = localStorage.getItem('contacts');
-    const parsedData = JSON.parse(localData);
-
-    if (parsedData) {
-      setContacts(parsedData);
-    }
-  }, []);
 
   useEffect(() => {
     localStorage.setItem('contacts', JSON.stringify(contacts));
